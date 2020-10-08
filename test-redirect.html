@@ -1,8 +1,44 @@
 <html>
 	<head>
-		<meta http-equiv="Refresh" content="5; url='https://hackerone.com/sg-vdp'" />
+
+	<!-- Bootstrap 4 -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+	<meta http-equiv="Refresh" content="11; url='https://hackerone.com/sg-vdp'" />
+
 	</head>
+
 	<body>
-		Show this body of text before redirecting...
+
+<div class="jumbotron">
+	<h1 class="display-4">Ever heard of VDP?</h1>
+	<p class="lead">Vulnerability Disclosure Programme is a crowd-sourcing platform to uncover blindspots while securing our government cyber space!</p>
+	<hr class="my-4">
+		<p>Here is your flag: flag{INSERTFLAGHERE}</p>
+		<p>Redirecting in <a id="countdown">10</a> ...<p>
+	<div class="progress">
+	  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+	</div>
+</div>
+
+
+		<script>
+			//count down code
+			var seconds = 10;
+			var i = seconds;
+			var counterBack = setInterval(function () {
+			  i--;
+			  if (i >= 0) {
+			    $('.progress-bar').css('width', 100-(i*(100/seconds)) + '%');
+			    $('#countdown')[0].innerHTML = i;
+			  } else {
+			    clearInterval(counterBack);
+			  }
+			}, 1000);
+		</script>
+
 	</body>
 </html>
