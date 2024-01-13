@@ -1,0 +1,1 @@
+$ExecutionContext.SessionState.LanguageMode | Out-File -FilePath C:\Windows\tasks\test.txt
